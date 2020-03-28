@@ -1,7 +1,6 @@
-let num = 266219,
-    result = 1;
+let num = 266219;
 
-num.toString().split("").forEach(item => result *= item);
+let result = num.toString().split("").reduce((result, current) => result * current);
 
 console.log(result **= 3);
 
