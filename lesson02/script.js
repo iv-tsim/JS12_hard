@@ -1,7 +1,8 @@
-let num = 266219;
+const num = 266219;
 
-let result = num.toString().split("").reduce((result, current) => result * current);
+const multipliedNumbersOfNum = num.toString().split("").reduce((result, current) => result * current);
 
-console.log(result **= 3);
+let exponentiation = multipliedNumbersOfNum ** 3;
+console.log(exponentiation);
 
-console.log(result.toString().slice(0, 2));
+console.log(exponentiation.toString().slice(0, 2));
