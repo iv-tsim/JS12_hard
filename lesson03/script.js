@@ -1,26 +1,27 @@
-let lang = "en",
+const lang = "en",
     weekday = [
     ["Понедельник, вторник, среда, четверг, пятница"],
     ["Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday"]
 ];
 
 if (lang === "ru"){
-    console.log("Понедельник, вторник, среда, четверг, пятница");
+    console.log(weekday[0][0]);
 } else if(lang === "en"){
-    console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
+    console.log(weekday[0][0]);
 }
 
 switch(lang){
     case "en":
-        console.log("Monday, Tuesday, Wednesday, Thursday, Friday, Saturday, Sunday");
+        console.log(weekday[0][0]);
         break;
-    case "ru": console.log("Понедельник, вторник, среда, четверг, пятница");
+    case "ru":
+        console.log(weekday[0][0]);
+        break;
+    default: console.log("Something went wrong");
 }
 
 (lang === "ru") ? console.log(weekday[0][0]) : console.log(weekday[1][0]);
 
-let namePerson = "Артем";
+const namePerson = "Артем";
 
-(namePerson === "Артем") ? console.log("директор") :
-    (namePerson === "Максим") ? console.log("преподаватель") :
-    console.log("студент");
+console.log((namePerson === "Артем") ? "директор" : (namePerson === "Максим") ? "преподаватель" : "студент");
