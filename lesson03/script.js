@@ -5,17 +5,17 @@ const lang = "en",
     ]);
 
 if (lang === "ru"){
-    console.log(weekday.get(lang));
+    console.log(weekday.get("ru"));
 } else if(lang === "en"){
-    console.log(weekday.get(lang));
+    console.log(weekday.get("en"));
 }
 
 switch(lang){
     case "en":
-        console.log(weekday.get(lang));
+        console.log(weekday.get("en"));
         break;
     case "ru":
-        console.log(weekday.get(lang));
+        console.log(weekday.get("ru"));
         break;
     default: console.log("Something went wrong");
 }
