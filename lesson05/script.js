@@ -13,5 +13,5 @@ for (let i = 2; i <= n; i++) {
     for (let j = 2; j < i; j++) {
         if (i % j == 0) continue primeNumbers;
     }
-    console.log( i );
+    console.log(i + ": делители этого числа 1 и " + i);
 }
