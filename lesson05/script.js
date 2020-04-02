@@ -1,11 +1,10 @@
 const arr = [1234, 234, 7654, 4567, 758, 4758, 7748];
 
-arr.filter(function(number){
-    if (number.toString().slice(0, 1) === "2" || number.toString().slice(0, 1) === "4") {
-        console.log(number);
-    }
-});
-
+console.log(
+    arr.filter(function(number){
+        return (number.toString().slice(0, 1) === "2" || number.toString().slice(0, 1) === "4");
+    })
+);
 const n = 100;
 
 primeNumbers:
