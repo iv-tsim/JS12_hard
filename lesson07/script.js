@@ -2,12 +2,19 @@
 
 const week = ["Понедельник", "Вторник", "Среда", "Четверг", "Пятница", "Суббота", "Воскресенье"];
 
+const createElement = function(item, appearance) {
+    let element = document.createElement("div");
+    if (appearance) {element.classList = appearance;}
+    element.innerHTML = item;
+    document.body.append(element);
+};
+
 week.forEach(function(item, index) {
     if (item === "Суббота" || item === "Воскресенье") {
-        document.write("<div>" + item.italics() + "</div>");
+        createElement(item, "italics");
     } else if (index === new Date().getDay() - 1) {
-        document.write("<div>" + item.bold() + "</div>");
+        createElement(item, "bold");
     } else {
-        document.write("<div>" + item + "</div>");
+        createElement(item);
     }
 });
