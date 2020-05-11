@@ -58,7 +58,7 @@ secondElem.textContent = `${addZero(date.getDate())}.${addZero(date.getMonth())}
 body.appendChild(firstElem);
 body.appendChild(secondElem);
 
-let interval = setInterval(() => {
+setInterval(() => {
     date = new Date();
     secondElem.textContent = `${addZero(date.getDate())}.${addZero(date.getMonth())}.${date.getFullYear()} - ${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`
     firstElem.textContent = `Сегодня ${weekday[0].toUpperCase() + weekday.slice(1)}, ${date.toLocaleString('ru', options)} ${date.getFullYear()} года, ${getHours()}, ${getMinutes()}, ${getSeconds()}`;
