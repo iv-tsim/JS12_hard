@@ -1,6 +1,6 @@
 "use strict";
 
-const date = new Date();
+let date = new Date();
 const weekday = date.toLocaleString("ru", {weekday: "long"});
 const options = {
     month: "long",
@@ -57,3 +57,9 @@ firstElem.textContent = `Сегодня ${weekday[0].toUpperCase() + weekday.sli
 secondElem.textContent = `${addZero(date.getDate())}.${addZero(date.getMonth())}.${date.getFullYear()} - ${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`
 body.appendChild(firstElem);
 body.appendChild(secondElem);
+
+let interval = setInterval(() => {
+    date = new Date();
+    secondElem.textContent = `${addZero(date.getDate())}.${addZero(date.getMonth())}.${date.getFullYear()} - ${addZero(date.getHours())}:${addZero(date.getMinutes())}:${addZero(date.getSeconds())}`
+    firstElem.textContent = `Сегодня ${weekday[0].toUpperCase() + weekday.slice(1)}, ${date.toLocaleString('ru', options)} ${date.getFullYear()} года, ${getHours()}, ${getMinutes()}, ${getSeconds()}`;
+}, 1000)
